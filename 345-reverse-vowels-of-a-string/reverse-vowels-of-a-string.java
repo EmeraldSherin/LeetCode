@@ -4,11 +4,13 @@ class Solution {
         int l=0;
         int r=arr.length-1;
         while(l<r){
-            if(!isvowels(arr[l])){
+            while(l<r && !isvowels(arr[l])){
                 l++;
-            }else if(!isvowels(arr[r])){
+            }
+            while(l<r && !isvowels(arr[r])){
                 r--;
-            }else{
+            }
+            if(l<r){
                 char temp=arr[l];
                 arr[l]=arr[r];
                 arr[r]=temp;
